@@ -122,6 +122,7 @@ function splitInputFile(inputFile, ret) {
 
 			// audio data
 			else if (frameType === 250) {
+				// console.info(frameType & 0x1F)
 				var dataStart = frame.indexOf(1);
 				frame = frame.slice(dataStart + 6);
 				audioStream.write(frame);
